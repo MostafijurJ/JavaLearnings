@@ -1,4 +1,5 @@
 rootProject.name = 'JavaLearnings'
 include 'Stream'
 include 'streams'
+include 'Solid'
 
