@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Solid" />
             <option value="$PROJECT_DIR$/Stream" />
             <option value="$PROJECT_DIR$/streams" />
           </set>
