@@ -1,0 +1,29 @@
+
+T
+java:S1854"7Remove this useless assignment to local variable "yes".(ÅŞ±¾8ºãëâ¹/
+M
+java:S2201"+The return value of "collect" must be used.(…Œ¸šúÿÿÿÿ8Õ„ã¹/
+T
+java:S1135"2Complete the task associated to this TODO comment.(Ù–—Ğşÿÿÿÿ8¼ãëâ¹/
+I
+java:S1481"'Remove this unused "pr" local variable.(¬çÿÿÿÿÿ8Ù„ã¹/
+X	java:S125"<This block of commented-out lines of code should be removed.(£ø¾Î8¾ãëâ¹/
+T
+java:S1135"2Complete the task associated to this TODO comment.(ÂèÚ–ıÿÿÿÿ8Àãëâ¹/
+D
+java:S1481"'Remove this unused "pr" local variable.(ı¨Ò8Ş„ã¹/
+X	java:S125"<This block of commented-out lines of code should be removed.(£ø¾Î8Âãëâ¹/
+O
+java:S1135"2Complete the task associated to this TODO comment.(Ñ É¯8Ããëâ¹/
+E
+java:S1481"(Remove this unused "yes" local variable.(ÅŞ±¾8Åãëâ¹/
+]	java:S125!"<This block of commented-out lines of code should be removed.(¶÷ºƒÿÿÿÿÿ8Åãëâ¹/
+T
+java:S1135#"2Complete the task associated to this TODO comment.(ãÿúßûÿÿÿÿ8Æãëâ¹/
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(¹áçŞúÿÿÿÿ8Çãëâ¹/
+U	java:S106+"9Replace this use of System.out or System.err by a logger.(‰ÛÓØ8Çãëâ¹/
+Z	java:S106-"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Èãëâ¹/
+O
+java:S11350"2Complete the task associated to this TODO comment.(…ïœ†8Èãëâ¹/
+{
+java:S22935"YReplace the type specification in this constructor call with the diamond operator ("<>").(«×‰˜ÿÿÿÿÿ8Ëãëâ¹/
