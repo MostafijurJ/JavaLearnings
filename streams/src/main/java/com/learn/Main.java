@@ -3,12 +3,9 @@ package com.learn;
 import com.learn.model.Gender;
 import com.learn.model.Person;
 import com.learn.topics.Filtering;
-import com.learn.topics.MappingInStream;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -19,34 +16,17 @@ public class Main {
 
         List<Person> personList = getPerson();
 
-        // TODO Sorting in a stream
-        personList.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
-        for (Person pr : personList) {
-            //  System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
-        }
+    /**
+     * TODO find any match
+     *
+     * <p>findAnyMatch(personList);
+     */
 
-        /**
-         *         TODO filtering
-          */
-        filterByGender(personList);
-
-        // TODO find all match
-        boolean yes = personList.stream()
-                .anyMatch(person -> person.getName().equalsIgnoreCase("MR"));
-        //  System.out.println(yes);
-
-        // TODO group by
-
-        Map<Gender, List<Person>> genderGroup = personList.stream()
-                .collect(Collectors.groupingBy(Person::getGender));
-        genderGroup.forEach(
-                ((gender, people) -> {
-                 //   System.out.println(gender);
-                    for (Person person : people) {
-                      //  System.out.println(person.getName() + "\t" + person.getAge() + "\t" + person.getGender());
-                    }
-                    System.out.println();
-                }));
+    /**
+     * TODO group by
+     *
+     * <p>Grouping.groupedByGender(personList);
+     */
 
         /**
          * TODO Creating streams from regular expressions
@@ -67,30 +47,28 @@ public class Main {
          */
 
 
-        /**
-         * TODO Filter and Sorted by age in ascending order
-         *
-         */
+    /**
+     * TODO Filter and Sorted by age in ascending order
+     *
+     * <p>Filtering filtering = new Filtering();
+     * filtering.filterByAge(personList);
+     */
+  }
 
-        Filtering filtering = new Filtering();
-        filtering.filterByAge(personList);
+  private static void findAnyMatch(List<Person> personList) {
+    boolean yes = personList.stream().anyMatch(person -> person.getName().equalsIgnoreCase("MR"));
+    System.out.println(yes);
+  }
 
-
-
-
-
-
+  private static void filterByGender(List<Person> personList) {
+    List<Person> femaleList =
+        personList.stream()
+            .filter(person -> person.getGender().equals(Gender.MALE))
+            .collect(Collectors.toList());
+    for (Person pr : femaleList) {
+      // System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
     }
-
-    private static void filterByGender(List<Person> personList) {
-        List<Person> femaleList =
-                personList.stream()
-                        .filter(person -> person.getGender().equals(Gender.MALE))
-                        .collect(Collectors.toList());
-        for (Person pr : femaleList) {
-            // System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
-        }
-    }
+  }
 
     private static void createStream() {
         Stream<String> stream = Pattern.compile("\\s+").splitAsStream("This is a test");

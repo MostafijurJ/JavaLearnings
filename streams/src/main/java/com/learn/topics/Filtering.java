@@ -10,7 +10,7 @@ public class Filtering {
     public void filterByAge(List<Person> personList) {
        personList.stream()
                .filter(this::isAdult)
-               .sorted(Comparator.comparingInt(Person::getAge))
+               .sorted(Comparator. comparing(Person::getAge).reversed())
                .forEach( t -> System.out.println(t.getName() + "\t" + t.getAge()));
     }
 
