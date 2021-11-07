@@ -39,8 +39,8 @@ public class Main {
         genderGroup.forEach(
                 ((gender, people) -> {
                     System.out.println(gender);
-                    for (Person pr : people) {
-                        System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
+                    for (Person person : people) {
+                        System.out.println(person.getName() + "\t" + person.getAge() + "\t" + person.getGender());
                     }
                     System.out.println();
                 }));
