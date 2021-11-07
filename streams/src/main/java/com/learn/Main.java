@@ -1,10 +1,16 @@
 package com.learn;
 
+import com.learn.model.Gender;
+import com.learn.model.Person;
+import com.learn.topics.MappingInStream;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -18,14 +24,10 @@ public class Main {
             //  System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
         }
 
-        // TODO filtering
-        List<Person> femaleList =
-                personList.stream()
-                        .filter(person -> person.getGender().equals(Gender.MALE))
-                        .collect(Collectors.toList());
-        for (Person pr : femaleList) {
-            // System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
-        }
+        /**
+         *         TODO filtering
+          */
+        filterByGender(personList);
 
         // TODO find all match
         boolean yes = personList.stream()
@@ -38,16 +40,52 @@ public class Main {
                 .collect(Collectors.groupingBy(Person::getGender));
         genderGroup.forEach(
                 ((gender, people) -> {
-                    System.out.println(gender);
+                 //   System.out.println(gender);
                     for (Person person : people) {
-                        System.out.println(person.getName() + "\t" + person.getAge() + "\t" + person.getGender());
+                      //  System.out.println(person.getName() + "\t" + person.getAge() + "\t" + person.getGender());
                     }
                     System.out.println();
                 }));
 
-        // TODO
+        /**
+         * TODO Creating streams from regular expressions
+         *
+         * createStream();
+         *
+         */
+
+
+
+        /**
+         * TODO MAP Person BY AGE AND NAME
+         *
+         *
+         * MappingInStream mapping = new MappingInStream();
+         *         mapping.mapPersonByAge(personList);
+         *
+         */
+
+
+
+
 
     }
+
+    private static void filterByGender(List<Person> personList) {
+        List<Person> femaleList =
+                personList.stream()
+                        .filter(person -> person.getGender().equals(Gender.MALE))
+                        .collect(Collectors.toList());
+        for (Person pr : femaleList) {
+            // System.out.println(pr.getName() + "\t" + pr.getAge() + "\t" + pr.getGender());
+        }
+    }
+
+    private static void createStream() {
+        Stream<String> stream = Pattern.compile("\\s+").splitAsStream("This is a test");
+        stream.forEach(System.out::println);
+    }
+
 
     private static List<Person> getPerson() {
         List<Person> personList = new ArrayList<Person>();

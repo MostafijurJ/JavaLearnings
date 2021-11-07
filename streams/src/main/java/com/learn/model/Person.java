@@ -1,4 +1,4 @@
-package com.learn;
+package com.learn.model;
 
 public class Person {
     private String name;
