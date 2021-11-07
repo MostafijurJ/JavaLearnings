@@ -2,6 +2,7 @@ package com.learn;
 
 import com.learn.model.Gender;
 import com.learn.model.Person;
+import com.learn.topics.Filtering;
 import com.learn.topics.MappingInStream;
 
 import java.util.ArrayList;
@@ -66,6 +67,16 @@ public class Main {
          */
 
 
+        /**
+         * TODO Filter and Sorted by age in ascending order
+         *
+         */
+
+        Filtering filtering = new Filtering();
+        filtering.filterByAge(personList);
+
+
+
 
 
 
@@ -89,10 +100,10 @@ public class Main {
 
     private static List<Person> getPerson() {
         List<Person> personList = new ArrayList<Person>();
-        personList.add(new Person("KAJOL", "25", Gender.MALE));
-        personList.add(new Person("Mr", "16", Gender.MALE));
-        personList.add(new Person("Jerry", "20", Gender.FEMALE));
-        personList.add(new Person("Alice", "21", Gender.COMMON));
+        personList.add(new Person("KAJOL", 25, Gender.MALE));
+        personList.add(new Person("Mr", 16, Gender.MALE));
+        personList.add(new Person("Jerry", 20, Gender.FEMALE));
+        personList.add(new Person("Alice", 21, Gender.COMMON));
         return personList;
     }
 }

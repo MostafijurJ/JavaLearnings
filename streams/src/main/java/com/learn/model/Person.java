@@ -2,10 +2,10 @@ package com.learn.model;
 
 public class Person {
     private String name;
-    private String age;
+    private int age;
     private Gender gender;
 
-    public Person(String name, String age, Gender gender) {
+    public Person(String name, int age, Gender gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -23,11 +23,11 @@ public class Person {
         return this;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public Person setAge(String age) {
+    public Person setAge(int age) {
         this.age = age;
         return this;
     }
