@@ -2,7 +2,7 @@ package com.learn;
 
 import com.learn.model.Gender;
 import com.learn.model.Person;
-import com.learn.topics.Filtering;
+import com.learn.topics.Sorting;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,24 @@ public class Main {
      * <p>Filtering filtering = new Filtering();
      * filtering.filterByAge(personList);
      */
-  }
+
+        /**
+         * TODO collect
+         *
+         *CollectTopics.collect(personList);
+         */
+
+        /**
+         * TODO Play with Sorting in streams
+         *
+         */
+
+        Sorting.sorted(personList);
+
+
+
+
+    }
 
   private static void findAnyMatch(List<Person> personList) {
     boolean yes = personList.stream().anyMatch(person -> person.getName().equalsIgnoreCase("MR"));
