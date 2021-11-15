@@ -99,6 +99,7 @@ public class Main {
         personList.add(new Person("Mr", 16, Gender.MALE));
         personList.add(new Person("Jerry", 20, Gender.FEMALE));
         personList.add(new Person("Alice", 21, Gender.COMMON));
+        personList.add(new Person("NULL", 22, Gender.FEMALE));
         return personList;
     }
 }
