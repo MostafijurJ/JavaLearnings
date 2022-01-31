@@ -1,4 +1,4 @@
-package com.learn.java.daily;
+package com.learn.java.daily_challenges;
 
 class ListNode {
   int val;

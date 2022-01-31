@@ -1,4 +1,4 @@
-package com.learn.java.daily;
+package com.learn.java.daily_challenges;
 
 public class TwoSum {
   public static void main(String[] args) {

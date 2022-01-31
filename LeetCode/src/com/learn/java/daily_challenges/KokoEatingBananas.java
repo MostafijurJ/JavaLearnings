@@ -1,4 +1,4 @@
-package com.learn.java.daily;
+package com.learn.java.daily_challenges;
 
 public class KokoEatingBananas {
   public static void main(String[] args) {
