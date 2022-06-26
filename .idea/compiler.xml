@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="reflections" />
         <module name="OOP" />
+        <module name="reflections" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
